@@ -1,10 +1,10 @@
 # reflex-decision-environment
 
-Decision Environment image for **Reflex** (community continuation of
+Decision Environment image for Reflex (community continuation of
 Event-Driven Ansible) activations, replacing Red Hat's
 `quay.io/ansible/ansible-rulebook` minimal DE. Pins `ansible-rulebook` and the
-`ansible.eda` collection so activations keep working regardless of upstream
-image publishing.
+`ansible.eda` collection so activations keep working even if upstream stops
+publishing images.
 
 Published at `ghcr.io/reflex-automation/reflex-decision-environment`.
 
