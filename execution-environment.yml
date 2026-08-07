@@ -6,7 +6,9 @@ version: 3
 
 images:
   base_image:
-    name: "registry.access.redhat.com/ubi9/python-312-minimal:latest"
+    # Pinned by digest for supply-chain reproducibility (tag: latest as of
+    # 2026-08-07; refresh the digest when deliberately bumping the base).
+    name: "registry.access.redhat.com/ubi9/python-312-minimal@sha256:74c596c5d658fd82d226e84418b199640e5819b7b0475801ec5083b8d144aa0d"
 
 options:
   package_manager_path: /usr/bin/microdnf
@@ -23,7 +25,7 @@ dependencies:
   ansible_core:
     package_pip: ansible-core~=2.20.7
   ansible_runner:
-    package_pip: ansible-runner
+    package_pip: ansible-runner==2.4.3
   system:
     - java-17-openjdk-headless [platform:rpm]
     - python3.12-devel [compile platform:rpm]
@@ -32,5 +34,7 @@ additional_build_steps:
   append_final:
     # k8s runs activation pods with a random UID that can't write to the base
     # image's HOME (/opt/app-root/src); give ansible a writable home so
-    # galaxy cache / collection listing work.
+    # galaxy cache / collection listing work. /tmp is container-private
+    # (single-process activation pod), so a world-writable base dir is
+    # acceptable here.
     - ENV ANSIBLE_HOME=/tmp/.ansible ANSIBLE_LOCAL_TEMP=/tmp/.ansible/tmp HOME=/tmp
