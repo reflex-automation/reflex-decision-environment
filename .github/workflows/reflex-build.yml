@@ -19,7 +19,7 @@ jobs:
     if: github.event_name != 'schedule'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Install ansible-builder
         run: pipx install ansible-builder
       - name: Derive tag from ansible-rulebook pin
@@ -45,7 +45,7 @@ jobs:
     if: github.event_name == 'schedule'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Derive tag from ansible-rulebook pin
         run: echo "TAG=$(grep -oE 'ansible-rulebook==[0-9.]+' execution-environment.yml | cut -d= -f3)" >> "$GITHUB_ENV"
       - name: Trivy scan published image
