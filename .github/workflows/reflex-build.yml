@@ -25,7 +25,7 @@ jobs:
         run: echo "TAG=$(grep -oE 'ansible-rulebook==[0-9.]+' execution-environment.yml | cut -d= -f3)" >> "$GITHUB_ENV"
       - name: Build
         run: ansible-builder build --container-runtime docker --tag "$IMAGE:$TAG" -v3
-      - uses: docker/login-action@v3
+      - uses: docker/login-action@v4
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
