@@ -1,0 +1,16 @@
+{
+  "collection": "ms_eda_decision_environment_c1eb37ad",
+  "failed_files": [],
+  "last_completed_at": "2026-08-06T13:53:27.504632Z",
+  "last_error": "RuntimeError: Failed to open the local Milvus Lite database. If this database was created with an older Milvus Lite release, it may not be compatible with Milvus Lite 3.x. Move the existing .db file aside, then rebuild the index from your source markdown files with 'memsearch index'. Alternatively, use Milvus Server via Docker or Zilliz Cloud.",
+  "last_failed_at": "2026-08-06T13:53:27.504632Z",
+  "last_started_at": "2026-08-06T13:53:25.945602Z",
+  "milvus_uri": "~/.memsearch/milvus.db",
+  "operation": "index",
+  "paths": [
+    "/Users/sm0049/eda/eda-decision-environment/.memsearch/memory"
+  ],
+  "schema_version": 1,
+  "status": "error",
+  "updated_at": "2026-08-06T13:53:27.504632Z"
+}
