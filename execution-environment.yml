@@ -7,8 +7,8 @@ version: 3
 images:
   base_image:
     # Pinned by digest for supply-chain reproducibility (tag: latest as of
-    # 2026-08-07; refresh the digest when deliberately bumping the base).
-    name: "registry.access.redhat.com/ubi9/python-312-minimal@sha256:74c596c5d658fd82d226e84418b199640e5819b7b0475801ec5083b8d144aa0d"
+    # 2026-10-12; refresh the digest when deliberately bumping the base).
+    name: "registry.access.redhat.com/ubi9/python-312-minimal@sha256:3e48808ba773e303ebd92d757f6f9ea01e498cc112784418561e4f5f568aae5f"
 
 options:
   package_manager_path: /usr/bin/microdnf
