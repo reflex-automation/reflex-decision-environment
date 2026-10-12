@@ -12,7 +12,7 @@ Published at `ghcr.io/reflex-automation/reflex-decision-environment`.
 
 | Component | Version | Source |
 |---|---|---|
-| ansible-rulebook | 1.3.1 | PyPI |
+| ansible-rulebook | 1.3.2 | PyPI |
 | ansible.eda collection | 2.13.0 | Galaxy |
 | ansible-core | ~=2.20.7 | PyPI |
 | base image | ubi9/python-312-minimal (digest-pinned) | registry.access.redhat.com |
@@ -22,7 +22,7 @@ Published at `ghcr.io/reflex-automation/reflex-decision-environment`.
 ```bash
 ansible-builder build \
   --container-runtime docker \
-  --tag reflex-decision-environment:1.3.1 \
+  --tag reflex-decision-environment:1.3.2 \
   -v3
 ```
 
@@ -31,7 +31,7 @@ For an amd64 cluster node (when building on Apple Silicon):
 ```bash
 ansible-builder build \
   --container-runtime docker \
-  --tag reflex-decision-environment:1.3.1 \
+  --tag reflex-decision-environment:1.3.2 \
   --extra-build-cli-args="--platform linux/amd64" \
   -v3
 ```
@@ -39,7 +39,7 @@ ansible-builder build \
 ## Verify
 
 ```bash
-docker run --rm reflex-decision-environment:1.3.1 ansible-rulebook --version
+docker run --rm reflex-decision-environment:1.3.2 ansible-rulebook --version
 ```
 
 ## Updating
