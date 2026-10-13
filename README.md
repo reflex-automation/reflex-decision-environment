@@ -50,7 +50,7 @@ the registry and update the Decision Environment entry in Reflex.
 
 ## License and attribution
 
-Apache-2.0 — see [LICENSE](LICENSE). The definition derives from the minimal
+Apache-2.0, see [LICENSE](LICENSE). The definition derives from the minimal
 decision environment example in
 [ansible/ansible-rulebook](https://github.com/ansible/ansible-rulebook)
 (Apache-2.0, © Red Hat, Inc. and contributors). The built image aggregates
